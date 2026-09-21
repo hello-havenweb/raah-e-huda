@@ -1,0 +1,352 @@
+// File: assets/css/animations.css
+
+/*
+========================================
+RAAH-E-HUDA - ANIMATIONS
+Premium Micro-Interactions & Motion
+========================================
+
+CONTENTS:
+1. Keyframe Definitions
+2. Background Animations
+3. Button Animations
+4. Card Animations
+5. Scroll Reveal Animations
+6. Page Transition Animations
+7. Loading States
+8. Reduced Motion Overrides
+
+PHILOSOPHY:
+- Smooth, elegant motion with premium easing
+- Respects user preferences (prefers-reduced-motion)
+- Enhances UX without being distracting
+========================================
+*/
+
+
+/* ========================================
+   1. KEYFRAME DEFINITIONS
+   ======================================== */
+
+/* Gradient Mesh Float Animation */
+@keyframes gradientMeshFloat {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(3%, 3%) rotate(2deg);
+    }
+    66% {
+        transform: translate(-2%, 4%) rotate(-1deg);
+    }
+}
+
+/* Orb Float Animations */
+@keyframes orbFloat1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+}
+
+@keyframes orbFloat2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-25px, 20px);
+    }
+}
+
+@keyframes orbFloat3 {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(calc(-50% + 15px), calc(-50% - 20px));
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+/* Shimmer/Shine Sweep Effect */
+@keyframes shine {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scale Pulse */
+@keyframes scalePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+
+/* ========================================
+   2. BACKGROUND ANIMATIONS
+   ======================================== */
+
+/* Applied in styles.css to .bg-gradient-mesh */
+/* Gentle floating motion for ambient background */
+
+
+/* ========================================
+   3. BUTTON ANIMATIONS
+   ======================================== */
+
+/* Shine Sweep on Hover (Optional Enhancement) */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Button Lift & Glow on Hover */
+.btn-primary,
+.btn-secondary,
+.btn-topic {
+    transition: 
+        transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background 250ms ease,
+        color 250ms ease,
+        border-color 250ms ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-topic:hover {
+    animation: none; /* Handled by transform in styles.css */
+}
+
+/* Active Press Effect */
+.btn-primary:active,
+.btn-secondary:active,
+.btn-topic:active {
+    transform: translateY(1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Focus Ring Animation */
+.btn:focus-visible {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+/* ========================================
+   4. CARD ANIMATIONS
+   ======================================== */
+
+/* Video Card Hover Elevation */
+.video-card {
+    transition: 
+        transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 250ms ease;
+}
+
+/* Topic Card Hover Lift + Glow */
+.topic-card {
+    transition: 
+        transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 250ms ease;
+}
+
+/* Topic Icon Rotation on Hover */
+.topic-icon {
+    transition: 
+        transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1),
+        background 250ms ease,
+        color 250ms ease;
+}
+
+
+/* ========================================
+   5. SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+/* Reveal Element (triggered by IntersectionObserver in main.js) */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(5px);
+    transition: 
+        opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Stagger Delays for Grid Items */
+.reveal-element[data-reveal-delay="100"] {
+    transition-delay: 100ms;
+}
+
+.reveal-element[data-reveal-delay="200"] {
+    transition-delay: 200ms;
+}
+
+.reveal-element[data-reveal-delay="300"] {
+    transition-delay: 300ms;
+}
+
+.reveal-element[data-reveal-delay="400"] {
+    transition-delay: 400ms;
+}
+
+.reveal-element[data-reveal-delay="500"] {
+    transition-delay: 500ms;
+}
+
+.reveal-element[data-reveal-delay="600"] {
+    transition-delay: 600ms;
+}
+
+
+/* ========================================
+   6. PAGE TRANSITION ANIMATIONS
+   ======================================== */
+
+/* Page Load Fade In */
+body {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+/* ========================================
+   7. LOADING STATES
+   ======================================== */
+
+/* Spinner (if needed for async operations) */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--color-text-inverse);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+
+/* ========================================
+   8. REDUCED MOTION OVERRIDES
+   ======================================== */
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Disable background animations */
+    .bg-gradient-mesh,
+    .bg-orb {
+        animation: none !important;
+    }
+    
+    /* Disable scroll reveal blur */
+    .reveal-element {
+        filter: none !important;
+    }
+    
+    /* Keep essential hover states but remove motion */
+    .btn:hover,
+    .video-card:hover,
+    .topic-card:hover {
+        transform: none !important;
+    }
+}

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>RAAH-E-HUDA | Islamic Dars & Speeches by Dr. Israr Ahmad</title>
+    <meta name="description" content="Authentic Islamic knowledge through Dars-e-Qur'an and speeches by Dr. Israr Ahmad. Deep understanding of Qur'an, Seerah, Iman, and Islamic teachings.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="RAAH-E-HUDA | Islamic Dars & Speeches">
+    <meta property="og:description" content="Authentic Islamic knowledge through Dars-e-Qur'an and speeches by Dr. Israr Ahmad.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts: Multi-language Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+    <!--
+    ========================================
+    RAAH-E-HUDA - HOME PAGE
+    ========================================
+    
+    STRUCTURE:
+    1. Skip Link (Accessibility)
+    2. Animated Background Layers
+    3. Navigation (Multi-language + Auth State)
+    4. Hero Section (Premium Wordmark + CTAs)
+    5. Latest Uploads Section (YouTube Embeds)
+    6. Featured Topics Section (6 Topic Cards)
+    7. Why RAAH-E-HUDA Section (Feature List)
+    8. About Snapshot Section
+    9. Footer (Links + HAVEN Credit)
+    
+    FEATURES:
+    - Full i18n support (EN/UR/AR)
+    - RTL layout switching
+    - Scroll reveal animations
+    - Premium micro-interactions
+    - Accessible markup
+    - Responsive design
+    ========================================
+    -->
+    
+    <!-- Skip to Content Link (Accessibility) -->
+    <a href="#main-content" class="skip-link" data-i18n="accessibility.skipToContent">Skip to main content</a>
+    
+    <!-- Animated Background Layers -->
+    <div class="background-container" aria-hidden="true">
+        <!-- Layer 1: Animated Gradient Mesh -->
+        <div class="bg-gradient-mesh"></div>
+        
+        <!-- Layer 2: Islamic Geometric Pattern Overlay -->
+        <div class="bg-pattern"></div>
+        
+        <!-- Layer 3: Subtle Noise Texture -->
+        <div class="bg-noise"></div>
+        
+        <!-- Decorative Glowing Orbs -->
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Brand Wordmark -->
+                <a href="index.html" class="brand-wordmark" aria-label="RAAH-E-HUDA Home">
+                    <span class="wordmark-text">RAAH-E-HUDA</span>
+                    <span class="wordmark-accent"></span>
+                </a>
+                
+                <!-- Desktop Navigation Links -->
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+                    <a href="about.html" class="nav-link" data-i18n="nav.about">About</a>
+                    <a href="privacy.html" class="nav-link" data-i18n="nav.privacy">Privacy</a>
+                    <a href="terms.html" class="nav-link" data-i18n="nav.terms">Terms</a>
+                </div>
+                
+                <!-- Utility Navigation -->
+                <div class="nav-utilities">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" data-i18n-attr="aria-label:nav.languageMenu" aria-haspopup="true" aria-expanded="false" id="langBtn">
+                            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <button class="lang-option" data-lang="en">English</button>
+                            <button class="lang-option" data-lang="ur">اردو</button>
+                            <button class="lang-option" data-lang="ar">العربية</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Auth Button (Login/Logout) -->
+                    <a href="login.html" class="btn btn-outline btn-auth" id="authBtn" data-i18n="nav.login">Login</a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" data-i18n-attr="aria-label:nav.menuToggle" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Home</a>
+                <a href="about.html" class="mobile-nav-link" data-i18n="nav.about">About</a>
+                <a href="privacy.html" class="mobile-nav-link" data-i18n="nav.privacy">Privacy</a>
+                <a href="terms.html" class="mobile-nav-link" data-i18n="nav.terms">Terms</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content reveal-element">
+                    <!-- Decorative Top Accent -->
+                    <div class="hero-accent-line"></div>
+                    
+                    <!-- Main Wordmark Display -->
+                    <h1 class="hero-wordmark">
+                        <span class="wordmark-main">RAAH-E-HUDA</span>
+                        <span class="wordmark-subtitle" data-i18n="hero.subtitle">The Path of Guidance</span>
+                    </h1>
+                    
+                    <!-- Tagline -->
+                    <p class="hero-tagline" data-i18n="hero.tagline">
+                        Authentic Dars-e-Qur'an & Islamic Speeches by Dr. Israr Ahmad
+                    </p>
+                    
+                    <!-- Intro Paragraph -->
+                    <p class="hero-description" data-i18n="hero.description">
+                        Embark on a transformative journey through the Qur'an and Islamic knowledge. Our channel preserves and shares the profound teachings of Dr. Israr Ahmad, offering deep insights into faith, spirituality, and righteous living. Each dars is a step toward understanding Allah's message and implementing it in our daily lives.
+                    </p>
+                    
+                    <!-- Call-to-Action Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-hero-primary">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            <span data-i18n="hero.watchYoutube">Watch on YouTube</span>
+                        </a>
+                        <button class="btn btn-secondary btn-hero-secondary" onclick="document.getElementById('topics-section').scrollIntoView({behavior: 'smooth'})">
+                            <span data-i18n="hero.exploreTopics">Explore Topics</span>
+                            <svg class="btn-icon-right" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Decorative Bottom Accent -->
+                    <div class="hero-accent-line hero-accent-line-bottom"></div>
+                </div>
+                
+                <!-- Decorative Geometric Ornament -->
+                <div class="hero-ornament" aria-hidden="true">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="58" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <circle cx="60" cy="60" r="45" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+                        <circle cx="60" cy="60" r="32" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+                        <path d="M60 20 L60 100 M20 60 L100 60" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <path d="M35 35 L85 85 M85 35 L35 85" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Latest Uploads Section -->
+        <section class="section latest-uploads-section" id="latest-uploads">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header reveal-element">
+                    <div class="section-label" data-i18n="latestUploads.label">Recent Content</div>
+                    <h2 class="section-title" data-i18n="latestUploads.title">Latest Uploads</h2>
+                    <p class="section-description" data-i18n="latestUploads.description">
+                        Explore our most recent dars and Islamic speeches. Each video offers timeless wisdom and practical guidance for modern Muslims seeking to strengthen their faith.
+                    </p>
+                </div>
+                
+                <!-- Video Grid -->
+                <div class="video-grid">
+                    <!-- Video Card 1 -->
+                    <!-- INSTRUCTION: Replace "dQw4w9WgXcQ" with actual YouTube video ID -->
+                    <div class="video-card reveal-element" data-reveal-delay="100">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 1"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video1.title">Understanding Surah Al-Baqarah</h3>
+                            <p class="video-description" data-i18n="latestUploads.video1.description">Deep dive into the verses of guidance and wisdom</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 2 -->
+                    <div class="video-card reveal-element" data-reveal-delay="200">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 2"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video2.title">Tafsir: Signs of the Last Day</h3>
+                            <p class="video-description" data-i18n="latestUploads.video2.description">Prophetic insights into the end times</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 3 -->
+                    <div class="video-card reveal-element" data-reveal-delay="300">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 3"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video3.title">The Concept of Tawheed</h3>
+                            <p class="video-description" data-i18n="latestUploads.video3.description">Foundation of Islamic monotheism explained</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 4 -->
+                    <div class="video-card reveal-element" data-reveal-delay="400">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 4"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video4.title">Seerah: The Makkan Period</h3>
+                            <p class="video-description" data-i18n="latestUploads.video4.description">Early years of Prophet Muhammad ﷺ</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 5 -->
+                    <div class="video-card reveal-element" data-reveal-delay="500">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 5"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video5.title">Purification of the Soul</h3>
+                            <p class="video-description" data-i18n="latestUploads.video5.description">Journey of spiritual cleansing and growth</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Card 6 -->
+                    <div class="video-card reveal-element" data-reveal-delay="600">
+                        <div class="video-embed-wrapper">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" 
+                                title="Video 6"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="video-card-content">
+                            <h3 class="video-title" data-i18n="latestUploads.video6.title">Islamic Economics & Justice</h3>
+                            <p class="video-description" data-i18n="latestUploads.video6.description">The Qur'anic model for social equity</p>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-text">
+                                <span data-i18n="latestUploads.watchBtn">Watch Now</span>
+                                <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Topics Section -->
+        <section class="section topics-section" id="topics-section">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header reveal-element">
+                    <div class="section-label" data-i18n="topics.label">Knowledge Areas</div>
+                    <h2 class="section-title" data-i18n="topics.title">Featured Topics & Playlists</h2>
+                    <p class="section-description" data-i18n="topics.description">
+                        Navigate through comprehensive collections of Islamic knowledge. Each topic is curated to provide structured learning and spiritual growth.
+                    </p>
+                </div>
+                
+                <!-- Topics Grid -->
+                <div class="topics-grid">
+                    <!-- Topic Card 1: Qur'an -->
+                    <div class="topic-card reveal-element" data-reveal-delay="100">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                <line x1="10" y1="8" x2="16" y2="8"></line>
+                                <line x1="10" y1="12" x2="16" y2="12"></line>
+                                <line x1="10" y1="16" x2="14" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.quran.title">Dars-e-Qur'an</h3>
+                        <p class="topic-description" data-i18n="topics.quran.description">
+                            Comprehensive verse-by-verse explanations and thematic studies of the Holy Qur'an, unveiling divine wisdom and practical applications.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Topic Card 2: Seerah -->
+                    <div class="topic-card reveal-element" data-reveal-delay="200">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="M20 21a8 8 0 1 0-16 0"></path>
+                                <path d="M12 13v-2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.seerah.title">Seerah & History</h3>
+                        <p class="topic-description" data-i18n="topics.seerah.description">
+                            Learn from the blessed life of Prophet Muhammad ﷺ and the early Islamic civilization—examples of mercy, courage, and unwavering faith.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Topic Card 3: Iman -->
+                    <div class="topic-card reveal-element" data-reveal-delay="300">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.iman.title">Iman & Aqeedah</h3>
+                        <p class="topic-description" data-i18n="topics.iman.description">
+                            Strengthen your belief system through deep understanding of the pillars of faith, oneness of Allah, and core Islamic creed.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Topic Card 4: Tazkiyah -->
+                    <div class="topic-card reveal-element" data-reveal-delay="400">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.tazkiyah.title">Tazkiyah & Spirituality</h3>
+                        <p class="topic-description" data-i18n="topics.tazkiyah.description">
+                            Purify your soul through self-reflection, remembrance of Allah, and spiritual practices that bring inner peace and closeness to the Divine.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Topic Card 5: Akhlaq -->
+                    <div class="topic-card reveal-element" data-reveal-delay="500">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.akhlaq.title">Akhlaq & Character</h3>
+                        <p class="topic-description" data-i18n="topics.akhlaq.description">
+                            Develop noble character traits, ethical conduct, and beautiful manners inspired by the Prophetic example and Qur'anic teachings.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Topic Card 6: Dawah -->
+                    <div class="topic-card reveal-element" data-reveal-delay="600">
+                        <div class="topic-icon" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="topic-title" data-i18n="topics.dawah.title">Dawah & Community</h3>
+                        <p class="topic-description" data-i18n="topics.dawah.description">
+                            Understand the methods and wisdom of inviting others to Islam and building a righteous community rooted in justice and compassion.
+                        </p>
+                        <button class="btn btn-topic">
+                            <span data-i18n="topics.exploreBtn">Explore</span>
+                            <svg class="btn-icon-right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why RAAH-E-HUDA Section -->
+        <section class="section why-section">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header reveal-element">
+                    <div class="section-label" data-i18n="why.label">Our Distinction</div>
+                    <h2 class="section-title" data-i18n="why.title">Why RAAH-E-HUDA</h2>
+                    <p class="section-description" data-i18n="why.description">
+                        We are committed to presenting authentic, unaltered Islamic knowledge that empowers believers to live purposeful lives guided by the Qur'an and Sunnah.
+                    </p>
+                </div>
+                
+                <!-- Features List -->
+                <div class="features-list">
+                    <!-- Feature 1 -->
+                    <div class="feature-item reveal-element" data-reveal-delay="100">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" data-i18n="why.feature1.title">Authentic Scholarship</h3>
+                            <p class="feature-description" data-i18n="why.feature1.description">
+                                Every dars is rooted in classical scholarship and delivered by Dr. Israr Ahmad, a renowned scholar known for his deep Qur'anic insights.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="feature-item reveal-element" data-reveal-delay="200">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" data-i18n="why.feature2.title">Comprehensive Coverage</h3>
+                            <p class="feature-description" data-i18n="why.feature2.description">
+                                From Tafsir to Fiqh, Seerah to spirituality—access a complete library of Islamic knowledge organized for easy learning.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="feature-item reveal-element" data-reveal-delay="300">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" data-i18n="why.feature3.title">Timeless & Relevant</h3>
+                            <p class="feature-description" data-i18n="why.feature3.description">
+                                Though delivered years ago, these teachings remain profoundly relevant, addressing contemporary challenges with Qur'anic wisdom.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="feature-item reveal-element" data-reveal-delay="400">
+                        <div class="feature-icon-wrapper">
+                            <svg class="feature-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" data-i18n="why.feature4.title">Free & Accessible</h3>
+                            <p class="feature-description" data-i18n="why.feature4.description">
+                                Knowledge is a trust. We provide all content freely, ensuring that no financial barrier stands between seekers and guidance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Snapshot Section -->
+        <section class="section about-snapshot-section">
+            <div class="container">
+                <div class="snapshot-wrapper reveal-element">
+                    <div class="snapshot-content">
+                        <div class="section-label" data-i18n="aboutSnapshot.label">Our Mission</div>
+                        <h2 class="snapshot-title" data-i18n="aboutSnapshot.title">Illuminating the Path of Truth</h2>
+                        <p class="snapshot-text" data-i18n="aboutSnapshot.text">
+                            RAAH-E-HUDA exists to preserve and disseminate the teachings of Dr. Israr Ahmad—a visionary scholar who dedicated his life to reviving the Qur'an as a living guide. We believe that authentic Islamic knowledge transforms hearts, families, and societies. Through carefully curated content, we aim to connect modern Muslims with the profound wisdom of the Qur'an and the beautiful example of the Prophet Muhammad ﷺ. Our goal is not just to inform, but to inspire a generation of believers who live with purpose, integrity, and devotion.
+                        </p>
+                        <a href="about.html" class="btn btn-primary">
+                            <span data-i18n="aboutSnapshot.learnMore">Learn More About Us</span>
+                            <svg class="btn-icon-right" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="snapshot-visual" aria-hidden="true">
+                        <!-- Decorative Islamic Pattern -->
+                        <svg class="snapshot-pattern" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="snapshot-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <circle cx="20" cy="20" r="2" fill="currentColor" opacity="0.15"/>
+                                    <circle cx="0" cy="0" r="2" fill="currentColor" opacity="0.15"/>
+                                    <circle cx="40" cy="0" r="2" fill="currentColor" opacity="0.15"/>
+                                    <circle cx="0" cy="40" r="2" fill="currentColor" opacity="0.15"/>
+                                    <circle cx="40" cy="40" r="2" fill="currentColor" opacity="0.15"/>
+                                </pattern>
+                            </defs>
+                            <rect width="200" height="200" fill="url(#snapshot-pattern)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer Main Content -->
+            <div class="footer-content">
+                <!-- Footer Brand -->
+                <div class="footer-brand">
+                    <div class="footer-wordmark">RAAH-E-HUDA</div>
+                    <p class="footer-tagline" data-i18n="footer.tagline">
+                        Illuminating hearts with divine guidance
+                    </p>
+                </div>
+                
+                <!-- Footer Navigation -->
+                <div class="footer-nav">
+                    <h3 class="footer-nav-title" data-i18n="footer.quickLinks">Quick Links</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html" class="footer-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" class="footer-link" data-i18n="nav.about">About</a></li>
+                        <li><a href="privacy.html" class="footer-link" data-i18n="nav.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link" data-i18n="nav.terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Footer Resources -->
+                <div class="footer-nav">
+                    <h3 class="footer-nav-title" data-i18n="footer.resources">Resources</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-link" data-i18n="footer.youtube">YouTube Channel</a></li>
+                        <li><a href="#topics-section" class="footer-link" data-i18n="footer.topics">Browse Topics</a></li>
+                        <li><a href="#latest-uploads" class="footer-link" data-i18n="footer.latest">Latest Uploads</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-i18n="footer.copyright">
+                    © 2024 RAAH-E-HUDA. All content provided for educational purposes.
+                </p>
+                <p class="footer-credit">
+                    <span data-i18n="footer.madeBy">Made by</span> 
+                    <a href="https://haven.pntr.dev" target="_blank" rel="noopener noreferrer" class="footer-credit-link">HAVEN</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Notification (for login/logout messages) -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    
+    <!-- Scripts -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

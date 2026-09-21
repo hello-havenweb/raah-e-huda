@@ -1241,4 +1241,118 @@ html[lang="ar"] {
     color: var(--color-text-inverse);
     padding: var(--space-md) var(--space-lg);
     border-radius: var(--radius-lg);
-    box-shadow: 
+    box-shadow: var(--shadow-xl);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    z-index: var(--z-toast);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all var(--transition-premium);
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+/* ========================================
+   18. UTILITIES & HELPERS
+   ======================================== */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   19. RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 2.25rem;
+        --font-size-3xl: 1.875rem;
+        --font-size-2xl: 1.5rem;
+        --space-3xl: 4rem;
+        --space-4xl: 5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta-group .btn {
+        width: 100%;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .snapshot-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .snapshot-visual {
+        order: -1;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .wordmark-main {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+
+/* ========================================
+   20. PRINT STYLES
+   ======================================== */
+@media print {
+    .navbar,
+    .mobile-menu,
+    .hero-ornament,
+    .background-container,
+    .footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
